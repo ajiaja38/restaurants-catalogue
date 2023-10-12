@@ -1,0 +1,257 @@
+$dark : #0f172a;
+
+catalogue-list {
+  display: grid;
+  gap: 16px;
+}
+
+@media screen and (max-width: 499px) {
+  navbar-item {
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../public/images/heros/hero-image_5-small.jpg");
+  }
+}
+
+@media screen and (min-width: 600px) {
+  hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../public/images/heros/hero-image_5-large.jpg");
+  }
+}
+
+@media screen and (max-width: 625px) {
+  navbar-item {
+    padding: 1rem 1rem;
+
+    nav {
+      position: absolute;
+      top: 5.5rem;
+      scale: 0;
+      right: .7rem;
+      max-width: 200px;
+      width: 100%;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      transition: .2s ease-in-out;
+      border-radius: 5px;
+      background-color: white;
+
+      .nav-item {
+        display: list-item;
+        text-align: left;
+        transition: .2s ease-in-out;
+        width: 100%;
+        padding: 1rem;
+
+        a {
+          color: $dark;
+        }
+      }
+    }
+
+    nav.active {
+      scale: 1;
+    }
+  }
+
+  hero-image {
+    .hero-title {
+      font-weight: 700;
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+  }
+
+  .catalogue-item-title {
+    font-size: 24px;
+  }
+
+  .catalogue-item-descriptions {
+    font-size: 12px;
+  }
+
+  main {
+    padding: 0 25px;
+
+    aside-content {
+      width: 100%;
+      flex-direction: column-reverse;
+
+      .contact-me,
+      .profile {
+        width: 100%;
+      }
+
+      .contact-me {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  footer {
+    footer-bar {
+      font-size: .5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 625px) {
+  navbar-item {
+    padding: 1rem 2rem;
+
+    .hamburger-icon {
+      display: none;
+    }
+
+    .nav-item {
+      margin-left: 44px;
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  hero-image {
+    .hero-title {
+      font-weight: 700;
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 24px;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+  }
+
+  main {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .catalogue-item-content {
+    padding: 16px 32px 32px 32px;
+  }
+
+  .catalogue-item-title {
+    font-size: 24px;
+  }
+
+  .catalogue-item-descriptions {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  catalogue-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  aside-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 5px;
+    width: 82%;
+    display: flex;
+
+    .contact-me,
+    .profile {
+      width: 100rem;
+    }
+
+    .contact-me {
+      form {
+        .input-area {
+          padding: .5rem;
+          outline: none;
+          width: 96.6%;
+          margin: .5rem;
+        }
+
+        .area-messages {
+          height: 9rem;
+        }
+      }
+    }
+
+    .profile {
+      .biodata {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 896px) {
+  aside-content {
+    width: 100%;
+    padding: 3rem 2rem;
+
+
+    .contact-me,
+    .profile {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  catalogue-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+  }
+
+  aside-content {
+    width: 90%;
+    padding: 5rem 3rem;
+
+    .contact-me,
+    .profile {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .information-detail-section {
+    flex-direction: column;
+
+    .restaurant-detail-image {
+      width: 100%;
+      margin: 0px 16px 16px 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .restaurant-detail-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0px 16px 16px 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    min-width: 1000px;
+  }
+}
